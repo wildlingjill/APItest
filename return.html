@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script>
+      // get user access code from current url
+      let code = window.location.search.match(/code=([a-zA-Z0-9]+)/)[1];
+      // sends postMessage to parent window, contains code and domain to send to
+      window.opener.postMessage({code}, window.location.origin);
+    </script>
+  </head>
+  <body>
+
+  </body>
+</html>
